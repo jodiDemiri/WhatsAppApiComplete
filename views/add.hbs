@@ -1,0 +1,34 @@
+<section class="showcase">
+    <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h2>Handlebars Assignment</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 offset-md-1">
+                <form action="/conts" method="POST" autocomplete="off">
+                    <input type="hidden" name="_id" value="{{contact._id}}">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Name"
+                                value="{{contact.name}}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Number</label>
+                            <input type="text" class="form-control" name="phone" placeholder="Telephone Number"
+                                value="{{contact.phone}}">
+                    </div>
+                    <div class="form-group">
+                        <label>Birthday</label>
+                        <textarea class="form-control" name="birthday"
+                            placeholder="Birthday">{{contact.birthday}}</textarea>
+                    </div>
+                    <div class="form-group float-right">
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-database"></i> Submit</button>
+                        <a class="btn btn-info btn-sm" href="/conts/list"><i class="fa fa-list-alt"></i> View All</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

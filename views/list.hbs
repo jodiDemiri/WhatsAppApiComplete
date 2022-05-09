@@ -1,0 +1,38 @@
+<section class="showcase">
+    <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h2>Handlebars assignment <a class="btn btn-info float-right btn-sm" href="/add.hbs"><i class="fa fa-plus"></i> Create New</a></h2>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number</th>
+                            <th>Birthday</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each contlist}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.phone}}</td>
+                            <td>{{this.birthday}}</td>
+                            <td>{{this.id}}</td>
+                            <td>
+                                <a href="/conts/{{this._id}}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a href="/conts/delete/{{this._id}}"
+                                    onclick="return confirm('Are you sure to delete this record ?');"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>	
